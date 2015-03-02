@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hee-Jong Seo, Former BCCP Postdoc | BCCP</title>
+    <title>oldsite | BCCP</title>
 
     
             <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
     
             <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://bccp.berkeley.edu/people/hee-jong-seo/">
+      <link rel="canonical" href="http://bccp.berkeley.edu/galleries/oldsite/">
 
 
 
@@ -27,23 +27,16 @@
     
 
 
-    
 
-    <meta name="author" content="BCCP">
-    
-    <meta property="og:site_name" content="BCCP">
-    <meta property="og:title" content="Hee-Jong Seo, Former BCCP Postdoc">
-    <meta property="og:url" content="http://bccp.berkeley.edu/people/hee-jong-seo/">
-    <meta property="og:description" content="My research interests are in high precision cosmology with
-large scale structure. I have studied analytically and numerically the
-performance of the BAO in large galaxy surveys as a dark energy probe.">
-    <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2013-11-18T08:47:28+00:00">
 
-    
-
-    
-
+<style type="text/css">
+    .image-block {
+        display: inline-block;
+    }
+    .flowr_row {
+        width: 100%;
+    }
+    </style>
 
 
 </head>
@@ -112,38 +105,25 @@ performance of the BAO in large galaxy surveys as a dark energy probe.">
         <div class="row">
             
             
-<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
-    <header>
-        <h1 class="p-name entry-title" itemprop="headline name">Hee-Jong Seo, Former BCCP Postdoc</h1>
-        
-
-    </header>
-    <div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<img alt="/images/people/Hee-Jong.png" class="align-left" src="../../images/people/Hee-Jong.png">
-<p>My research interests are in high precision cosmology with
-large scale structure. I have studied analytically and numerically the
-performance of the BAO in large galaxy surveys as a dark energy probe. I
-also worked on the evolution of galaxy clustering and halo occupation
-distribution, using dissipationless N-body simulations. My recent
-research have aimed at extending my previous work as well as expanding
-to observational and experimental studies and to weak lensing study: I
-have worked on nonlinear effects on BAO in depth with various
-high-resolution simulations, the effect of galaxy bias and redshift
-distortions on BAO, a feasibility of a BAO survey in radio bands, and
-combining BAO with SN data from SDSS. The ongoing projects are 1.
-measuring the power spectrum of cosmic shear from SDSS Stripe 82 2.
-re-capturing more cosmic information by Gaussianizing the convergence
-field 3. deriving a BAO constraint from the SDSS III imaging data.
-Hee-Jong Seo started at <a class="reference external" href="http://www.phy.ohiou.edu/~astro/">The Astrophysical
-Institute</a>, Ohio University in
-2014. Dept. of Physics Physics Research Bldg., 191 West Woodruff Ave.
-Columbus, OH 43210 <a class="reference external" href="mailto:seo.207@osu.edu">seo.207@osu.edu</a></p>
-</div>
-    </div>
     
+<nav class="breadcrumbs">
+<ul class="breadcrumb">
+        <li><a href="../">galleries</a></li>
+        <li><a href="#">oldsite</a></li>
+</ul>
+</nav>
 
-</article>
+    <h1>oldsite</h1>
+
+<div id="gallery_container"></div>
+<noscript>
+<ul class="thumbnails">
+        <li>
+<a href="800px-WMAP_2008.png" class="thumbnail image-reference" title="Px wmap 2008">
+            <img src="800px-WMAP_2008.thumbnail.png" alt="Px wmap 2008"></a>
+</li>
+</ul>
+</noscript>
 
         </div>
         <!--End of body content-->
@@ -174,6 +154,45 @@ Theme is <a href="http://bootswatch.com/paper/">Paper</a>
     </script>
     <!-- end fancy dates -->
     
+<script src="../../assets/js/flowr.plugin.js"></script>
+<script>
+jsonContent = [{"url": "800px-WMAP_2008.png", "title": "Px wmap 2008", "size": {"h": 151, "w": 310}, "url_thumb": "800px-WMAP_2008.thumbnail.png"}];
+$("#gallery_container").flowr({
+        data : jsonContent,
+        height : 180*.6,
+        padding: 5,
+        rows: -1,
+        render : function(params) {
+            // Just return a div, string or a dom object, anything works fine
+            img = $("<img />").attr({
+                'src': params.itemData.url_thumb,
+                'width' : params.width,
+                'height' : params.height
+            }).css('max-width', '100%');
+            link = $( "<a></a>").attr({
+                'href': params.itemData.url,
+                'class': 'image-reference'
+            });
+            div = $("<div />").addClass('image-block').attr({
+                'title': params.itemData.title,
+                'data-toggle': "tooltip",
+            });
+            link.append(img);
+            div.append(link);
+            div.hover(div.tooltip());
+            return div;
+        },
+        itemWidth : function(data) { return data.size.w; },
+        itemHeight : function(data) { return data.size.h; },
+        complete : function(params) {
+            if( jsonContent.length > params.renderedItems ) {
+                nextRenderList = jsonContent.slice( params.renderedItems );
+            }
+        }
+    });
+$("a.image-reference").colorbox({rel:"gal", maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+</script>
+
 
 
 

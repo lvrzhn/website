@@ -1,2 +1,2 @@
-Sitemap: http://kbarbary.github.io/bccp-website/sitemapindex.xml
+Sitemap: http://bccp.berkeley.edu/sitemapindex.xml
 
